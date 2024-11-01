@@ -17,9 +17,17 @@
     background-color: #762124;
 }
 
+.logo {
+    height: auto;
+    align-items: center;
+}
+
 .logo > img {
     height: 120px;
-    width:auto;
+    width: 350px;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
 }
 
 .navbar {
