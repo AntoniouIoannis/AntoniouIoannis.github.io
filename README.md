@@ -26,7 +26,9 @@
  
 ## 🚀 How to Run
 
-write " <a>i-antoniou.gr</a> " in your favorite Browser!!!
+write " i-antoniou.gr " in your favorite Browser!!!
+or  <a href="gr" target:_blank>
+        Click here!</a>
  
 ```bash
 # comments (code follows)
