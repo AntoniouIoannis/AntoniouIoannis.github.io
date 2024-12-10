@@ -26,8 +26,9 @@
  
 ## 🚀 How to Run
 
-write " i-antonio.gr " in yoyr favorite Browser!!!
+write " i-antoniou.gr " in your favorite Browser!!!
  
 ```bash
 # comments (code follows)
+clone:  https://github.com/AntoniouIoannis/AntoniouIoannis.github.io.git
 ```
