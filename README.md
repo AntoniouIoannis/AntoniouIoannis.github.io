@@ -27,8 +27,7 @@
 ## 🚀 How to Run
 
 write " i-antoniou.gr " in your favorite Browser!!!
-or  <a href="gr" target:_blank>
-        Click here!</a>
+or  <a href="AntoniouIoannis.github.io" target:_blank>Click here!</a>
  
 ```bash
 # comments (code follows)
