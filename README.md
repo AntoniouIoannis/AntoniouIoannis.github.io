@@ -26,7 +26,7 @@
  
 ## 🚀 How to Run
 
-write " i-antoniou.gr " in your favorite Browser!!!
+write " <a>i-antoniou.gr</a> " in your favorite Browser!!!
  
 ```bash
 # comments (code follows)
