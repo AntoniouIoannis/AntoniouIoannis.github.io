@@ -1,12 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const username = "AntoniouIoannis"; // GitHub username σου
+  const username = "AntoniouIoannis";
   const repoList = document.getElementById("repo-list");
 
   fetch(`https://api.github.com/users/${username}/repos`)
     .then(response => response.json())
     .then(repos => {
       repos.forEach(repo => {
-        // Φιλτράρουμε forked ή άδεια repos (προαιρετικά)
         if (repo.fork || !repo.description) return;
 
         const col = document.createElement("div");
