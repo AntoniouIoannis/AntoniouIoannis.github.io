@@ -93,3 +93,31 @@ footer {
     margin: 20px;
   }
 }
+
+.hero-image {
+  background-image: url('../img/header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+
+#skills {
+  background-image: url('../img/skills-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 60px 20px;
+}
+
+#skills h2 {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+}
+
+#skills ul li {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
