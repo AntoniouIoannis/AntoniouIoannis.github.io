@@ -1,4 +1,5 @@
 # ***-----------Ακόμα υπο κατασκευή-----------***
+# local repo pathname: [ C:\Users\ganton\OneDrive - Viohalco SA\AntoniouIoannis.github.io ]
 # Project Title: my Personal Website
  θα αποροφησει το repo ***personal-CV***
 ## 📚 Project Overview
