@@ -21,7 +21,7 @@ header {
   justify-content: center;
   align-items: center;
  
-  background-image:image('./img/bg-image-header.jpg');
+  background-image: url('./img/bg-image-header.jpg');
 
   /* trunk-ignore(git-diff-check/error) */
   background-size: cover;
