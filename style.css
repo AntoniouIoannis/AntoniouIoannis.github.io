@@ -100,32 +100,65 @@ a:hover {
   color: #1c5d88;
 }
 
-.wrapper {
-    display: flex;
-    width: 100%; height: auto;
-    justify-content: center; align-items: center; padding: 0 20%; overflow: hidden;
+/* Σχετικά */
+#about {
+  padding: 50px 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
-.cols { width: 50%; }
+
+#about h2 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.text-photo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.text-photo .flex-grow-1 {
+  flex: 1 1 400px;
+  max-width: 600px;
+}
+
+.text-photo img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
 .topline {
-    display: block; position: relative;
-    font-size: 35px; letter-spacing: 5px;
-    color: steelblue;
+  font-size: 28px;
+  color: #2980b9;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
 }
-.topline::after {
-    position: absolute; content: '';
-    width: 15px; height: 4px;
-    bottom: 10px; background-color: steelblue;
+
+h1, h2 {
+  color: #34495e;
 }
-h1 {
-    display: block; font-size: 3em; font-weight: 400;
-    color: slateblue;
-}
+
 .multiText {
-    color: steelblue; text-transform: capitalize;
+  font-weight: bold;
+  color: #007acc;
 }
-p {
-    display: block;
-    width: 90%; font-size: 1.2em; color: steelblue;
+
+.multiText2 {
+  font-weight: bold;
+  color: #8e44ad;
 }
 
 /* Υποσέλιδο */
