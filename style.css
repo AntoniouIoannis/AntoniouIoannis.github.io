@@ -1,5 +1,3 @@
-/* trunk-ignore-all(prettier) */
-/* Βασικά Στυλ */
 body {
   font-family:'Times New Roman', Times, serif;
   background-color:bisque;
@@ -10,7 +8,6 @@ body {
 /* Κεφαλίδα */
 header {
   position: relative;
-  /* trunk-ignore(git-diff-check/error) */
   height: auto; 
   overflow: hidden;
   color: white;
@@ -69,65 +66,6 @@ nav a {
 nav a:hover {
   text-decoration: underline;
 }
-
-.analog-clock{
-    position: relative;
-}
-
-.clock{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    background-image: url('./img/bg-clock.png');
-    /* background-image: url('./img/logo_bg_brown.png'); */
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0px 0px 50px rgba(216, 181, 6, 0.986);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.clock span{
-    position: absolute;
-    transform: rotate(calc(30deg * var(--i)));
-    inset: 6px; /* me αυτο οι αριθμοι ειναι εξω απο κυκλο */
-    text-align: center;  /* με αυτο μπηκαν μεσα */
-}
-
-.clock span b{
-    transform: rotate(calc(-30deg * var(--i)));
-    display: inline-block;
-    font-size: 17px;
-}
-
-.clock::before{
-    content: '';
-    position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgb(255, 0, 128);
-    z-index: 2;
-}
-
-.hand{
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-}
-
-.hand i{
-    position: absolute;
-    background-color: var(--clr);
-    width: 4px;
-    height: var(--h);
-    border-radius: 8px;
-}
-
 
 /* Ενότητες */
 section {
@@ -209,9 +147,6 @@ footer {
   width: auto;
   border-radius: 10px;
 }
-
-
-
 
 /* Responsive σχεδίαση */
 @media (max-width: 768px) {
