@@ -71,7 +71,7 @@ nav a:hover {
 section {
   max-width: 90%;
   margin: 30px auto;
-  background: cyan;
+  background: azure;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(90, 246, 39, 0.1);
@@ -100,65 +100,137 @@ a:hover {
   color: #1c5d88;
 }
 
-/* Σχετικά */
-#about {
-  padding: 50px 20px;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* =================================
+   ΝΕΟ ΣΤΥΛ ΓΙΑ ΤΗΝ ΕΝΟΤΗΤΑ "ABOUT"
+   ================================= */
+
+/* Εφαρμόζουμε ένα πιο μοντέρνο και απαλό στυλ για όλες τις ενότητες,
+   αντικαθιστώντας το έντονο 'cyan' φόντο. */
+section {
+  max-width: 90%;
+  margin: 40px auto;
+  background-color: #ffffff; /* Καθαρό λευκό για επαγγελματική εμφάνιση */
+  padding: 3rem; /* Περισσότερο εσωτερικό κενό */
+  border-radius: 16px; /* Πιο στρογγυλεμένες γωνίες */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Απαλή, μοντέρνα σκιά */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden; /* Διασφαλίζει ότι το περιεχόμενο σέβεται τις γωνίες */
 }
 
+section:hover {
+  transform: translateY(-6px); /* Διακριτικό εφέ "ανύψωσης" κατά το hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Ειδικές βελτιώσεις για την ενότητα #about */
+#about {
+  /* Ένα διακριτικό gradient δίνει βάθος */
+  background: linear-gradient(135deg, rgba(248, 249, 250, 0.4) 0%, #ffffff 100%);
+}
+
+#about .text-photo {
+  gap: 3rem; /* Αυξάνουμε το κενό μεταξύ κειμένου και εικόνας */
+}
+
+/* Βελτιωμένο στυλ για την εικόνα προφίλ */
+#about img {
+  width: 100%;
+  max-width: 500px; /* Ορίζουμε μέγιστο πλάτος για καλύτερη απόκριση */
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Πιο έντονη σκιά για να ξεχωρίζει */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+#about img:hover {
+  transform: scale(1.05); /* Εφέ ζουμ κατά το hover */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+}
+
+/* Αναβάθμιση της τυπογραφίας */
 #about h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #2c3e50; /* Σκούρο μπλε-γκρι για ισχυρή αντίθεση */
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+/* Διακοσμητική γραμμή κάτω από τον τίτλο για έμφαση */
+#about h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 5px;
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient για τη γραμμή */
+  border-radius: 3px;
+}
+
+/* Καλύτερη οργάνωση του κειμένου μέσα στο .wrapper */
+#about .wrapper .topline {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #6c757d; /* Ουδέτερο γκρι */
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+#about .wrapper .topline::after {
+    display: none; /* Αφαιρούμε την παλιά γραμμή */
+}
+
+/* Τα h2 και h1 μέσα στο wrapper λειτουργούν ως υπότιτλοι */
+#about .wrapper h2 {
+  font-size: 2rem;
+  color: #343a40;
+  margin-bottom: 8px;
+  padding-bottom: 0;
+  font-weight: 500;
+}
+#about .wrapper h2::after {
+  display: none; /* Αφαιρούμε τη γραμμή από τους υπότιτλους */
+}
+
+#about .wrapper h1 {
   font-size: 2.2rem;
-  color: #2c3e50;
+  color: #343a40;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
-.text-photo {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
+/* Νέο, πιο ζωντανό χρώμα για το κείμενο που αλλάζει */
+#about .multiText, #about .multiText2 {
+  color: #007bff; /* Ένα φωτεινό, επαγγελματικό μπλε */
+  text-transform: capitalize;
 }
 
-.text-photo .flex-grow-1 {
-  flex: 1 1 400px;
-  max-width: 600px;
-}
-
-.text-photo img {
-  max-width: 400px;
-  width: 100%;
-  height: auto;
-  border-radius: 15px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
-}
-
+/* Βελτίωση αναγνωσιμότητας για τις παραγράφους */
 #about p {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.8;
-  color: #333;
+  color: #495057; /* Πιο απαλό μαύρο για άνετη ανάγνωση */
 }
 
-.topline {
-  font-size: 28px;
-  color: #2980b9;
-  letter-spacing: 3px;
-  margin-bottom: 10px;
-}
+/* Responsive Design - Για να φαίνεται τέλειο και σε κινητά */
+@media (max-width: 992px) {
+  #about .text-photo {
+    flex-direction: column; /* Στοίχιση σε στήλη σε μικρές οθόνες */
+    text-align: center; /* Κεντράρισμα του κειμένου */
+  }
 
-h1, h2 {
-  color: #34495e;
-}
+  #about .text-photo .flex-grow-1 {
+    margin-right: 0 !important;
+    margin-bottom: 2.5rem;
+  }
 
-.multiText {
-  font-weight: bold;
-  color: #007acc;
-}
-
-.multiText2 {
-  font-weight: bold;
-  color: #8e44ad;
+  /* Κεντράρισμα της διακοσμητικής γραμμής */
+  #about h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* Υποσέλιδο */
