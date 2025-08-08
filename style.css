@@ -69,11 +69,11 @@ nav a:hover {
 
 /* Ενότητες */
 section {
-  max-width: 960px;
+  max-width: 90%;
   margin: 30px auto;
-  background: white;
+  background: cyan;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 10px;
   box-shadow: 0 2px 4px rgba(90, 246, 39, 0.1);
 }
 
