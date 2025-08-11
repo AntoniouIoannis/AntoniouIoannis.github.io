@@ -1,6 +1,6 @@
 body {
   font-family:'Times New Roman', Times, serif;
-  background-color:bisque;
+  background-color: darksalmon;
   margin: 0; padding: 0;
   line-height: 1.6; color: #333;
 }
@@ -16,12 +16,9 @@ header {
   justify-content: center;
   align-items: center;
  
-  background-image: url('./img/bg-image-header.jpg');
-
   /* trunk-ignore(git-diff-check/error) */
   background-size: cover;
   background-position: center;
-
   color: white;
   padding: 20px 0;
   text-align: center;
@@ -29,13 +26,9 @@ header {
 
 .bg-video {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  /* trunk-ignore(git-diff-check/error) */
-  object-fit: cover; 
-  z-index: 0;
+  top: 0;   left: 0;
+  width: 100%;   height: 100%;
+  object-fit: cover;   z-index: 0;
 }
 
 .header-content {
@@ -46,6 +39,7 @@ header {
 header h1 {
   margin: 0;
   font-size: 2.5em;
+  font-size: 20px;
 }
 
 header p {
@@ -100,21 +94,16 @@ a:hover {
   color: #1c5d88;
 }
 
-/* =================================
-   ΝΕΟ ΣΤΥΛ ΓΙΑ ΤΗΝ ΕΝΟΤΗΤΑ "ABOUT"
-   ================================= */
 
-/* Εφαρμόζουμε ένα πιο μοντέρνο και απαλό στυλ για όλες τις ενότητες,
-   αντικαθιστώντας το έντονο 'cyan' φόντο. */
 section {
   max-width: 90%;
   margin: 40px auto;
-  background-color: #ffffff; /* Καθαρό λευκό για επαγγελματική εμφάνιση */
-  padding: 3rem; /* Περισσότερο εσωτερικό κενό */
-  border-radius: 16px; /* Πιο στρογγυλεμένες γωνίες */
+  background-color: #ffffff; 
+  padding: 3rem; 
+  border-radius: 16px; 
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Απαλή, μοντέρνα σκιά */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden; /* Διασφαλίζει ότι το περιεχόμενο σέβεται τις γωνίες */
+  overflow: hidden; 
 }
 
 section:hover {
@@ -122,7 +111,7 @@ section:hover {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Ειδικές βελτιώσεις για την ενότητα #about */
+
 #about {
   /* Ένα διακριτικό gradient δίνει βάθος */
   background: linear-gradient(135deg, rgba(248, 249, 250, 0.4) 0%, #ffffff 100%);
@@ -211,7 +200,17 @@ section:hover {
 #about p {
   font-size: 1.15rem;
   line-height: 1.8;
-  color: #495057; /* Πιο απαλό μαύρο για άνετη ανάγνωση */
+  color: #495057; 
+}
+
+#skills {
+  background-image: url('../img/skills-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsive Design - Για να φαίνεται τέλειο και σε κινητά */
@@ -241,9 +240,17 @@ footer {
   color: white;
   margin-top: 30px;
 }
-
+#skills {
+  background-image: url('./img/skills-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 fouter {
-  background-image: url('../img/skills-bg.jpg');
+  background-image: url('./img/skills-bg.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
