@@ -4,11 +4,17 @@ body {
   margin: 0; padding: 0;
   line-height: 1.6; color: #333;
 }
-#clock {
+.day {
+  display: flex;
+  flex-direction: column; /* Κάθετη στοίχιση */
+  line-height: 1.2;       /* Λίγο μικρότερο κενό μεταξύ γραμμών */
+}
+#date, #time {
   font-family: 'Audiowide', cursive;
   color: #00ff00;
   font-size: 1rem;
   text-shadow: 0 0 5px #00ff00;
+  text-align: center;
 }
 
 .sticky-top-bar {
