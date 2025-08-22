@@ -4,6 +4,14 @@ body {
   margin: 0; padding: 0;
   line-height: 1.6; color: #333;
 }
+
+/* Στοχεύει όλα τα focusable στοιχεία όταν ο χρήστης χρησιμοποιεί πληκτρολόγιο */
+:focus-visible {
+  outline: 2px solid #007bff; /* Ένα έντονο μπλε περίγραμμα */
+  outline-offset: 2px; /* Λίγο κενό για να μην κολλάει στο στοιχείο */
+  background-color: #e6f2ff; /* Ένα απαλό μπλε φόντο */
+  border-radius: 4px; /* Στρογγυλεμένες γωνίες για ωραία εμφάνιση */
+}
 .day {
   display: flex;
   flex-direction: column; /* Κάθετη στοίχιση */
