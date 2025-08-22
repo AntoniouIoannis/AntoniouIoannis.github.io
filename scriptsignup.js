@@ -2,6 +2,33 @@
 document.addEventListener('DOMContentLoaded', function () {
     const registerForm = document.getElementById('registerForm');
 
+    // ...μέσα στο document.addEventListener('DOMContentLoaded', function () { ...
+
+    const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+
+    if (forgotPasswordLink) {
+        forgotPasswordLink.addEventListener('click', function (event) {
+            event.preventDefault(); // Αποτρέπουμε την προεπιλεγμένη συμπεριφορά του link
+
+            const email = prompt("Παρακαλώ εισάγετε το email σας για να σας στείλουμε το link επαναφοράς κωδικού:");
+
+            if (email) {
+                firebase.auth().sendPasswordResetEmail(email)
+                    .then(() => {
+                        alert('📧 Ένα email για την επαναφορά του κωδικού σας έχει σταλεί. Παρακαλώ ελέγξτε τα εισερχόμενά σας.');
+                    })
+                    .catch((error) => {
+                        let errorMessage = "Κάτι πήγε στραβά. Προσπαθήστε ξανά.";
+                        if (error.code === 'auth/user-not-found') {
+                            errorMessage = "Δεν βρέθηκε χρήστης με αυτό το email.";
+                        }
+                        console.error("Password Reset Error:", error);
+                        alert(`❌ ${errorMessage}`);
+                    });
+            }
+        });
+    }
+    
     // Έλεγχος αν η φόρμα εγγραφής υπάρχει στη σελίδα
     if (registerForm) {
         registerForm.addEventListener('submit', function (event) {
