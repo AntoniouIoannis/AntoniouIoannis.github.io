@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Έλεγχος αν η φόρμα εγγραφής υπάρχει στη σελίδα
     if (registerForm) {
         registerForm.addEventListener('submit', function (event) {
-            
             event.preventDefault();
 
             // Παίρνουμε τις τιμές από τα πεδία της φόρμας
@@ -13,26 +12,37 @@ document.addEventListener('DOMContentLoaded', function () {
             const email = document.getElementById('registerEmail').value;
             const password = document.getElementById('registerPassword').value;
 
-            firebase.database().ref('users/' + username).set({
+            firebase.auth().createUserWithEmailAndPassword(email, password)
+                .then((userCredential) => {
+            // Ο χρήστης δημιουργήθηκε με επιτυχία!
+            const user = userCredential.user;
+            console.log('User created:', user);
+
+            user.sendEmailVerification().then(() => {
+                alert('✅ Η εγγραφή ολοκληρώθηκε! \nΈνα email επαλήθευσης έχει σταλεί στη διεύθυνσή σου. \nΠαρακαλώ έλεγξε τα εισερχόμενά σου.');
+            });
+            
+            firebase.database().ref('users/' + user.uid).set({
                 username: username,
-                email: email,
-                password: password // (Μην το κάνετε αυτό σε παραγωγικό περιβάλλον!)
-            })
-            .then(() => {
-                // Ενημερώνουμε τον χρήστη για την επιτυχή εγγραφή
-                alert('Η εγγραφή σου ολοκληρώθηκε με επιτυχία!');
-                
-                registerForm.reset();
+                email: email
+            });
+
+            registerForm.reset();
             })
             .catch((error) => {
-                // Σε περίπτωση σφάλματος, το εμφανίζουμε στην κονσόλα και ενημερώνουμε τον χρήστη
-                console.error("Σφάλμα κατά την εγγραφή: ", error);
-                alert('Υπήρξε ένα σφάλμα κατά την εγγραφή. Παρακαλώ δοκίμασε ξανά.');
+                let errorMessage = "Υπήρξε ένα σφάλμα κατά την εγγραφή.";
+                if (error.code === 'auth/email-already-in-use') {
+                    errorMessage = "Αυτό το email χρησιμοποιείται ήδη από άλλον χρήστη.";
+                } else if (error.code === 'auth/weak-password') {
+                    errorMessage = "Ο κωδικός πρόσβασης είναι πολύ αδύναμος. Πρέπει να είναι τουλάχιστον 7 χαρακτήρες.";
+                }
+                console.error("Registration Error:", error);
+                alert(`❌ ${errorMessage}`);
             });
+            
         });
     }
 
-    // Κώδικας για την εναλλαγή μεταξύ login και register
     const wrapper = document.querySelector('.wrapper');
     const registerLink = document.querySelector('.register-link');
     const loginLink = document.querySelector('.login-link');
@@ -49,3 +59,4 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
