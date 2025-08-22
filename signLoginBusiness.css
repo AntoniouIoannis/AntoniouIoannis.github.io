@@ -10,15 +10,19 @@ body{
     align-items: center;
     min-height: 100vh;   
     background: #081b29;
+    padding: 20px;
 }
 .wrapper{
     position: relative;
-    width: 750px; 
-    height: 500px; 
+    width: 100%;
+    max-width: 750px; 
+    height: auto; 
+    min-height: 500px;
     background: transparent;
     border: 2px solid #002bff;
     box-shadow: 0 0 25px #002bff;
     overflow: hidden;
+    border-radius: 12px;
 }      
 .wrapper .form-box{
     position: absolute;   
