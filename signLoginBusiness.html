@@ -45,33 +45,26 @@
             <h2 class="animation" style="--i:17; --j:0;">Sign Up 
                 <i class="fa-solid fa-user-plus"></i> or 
                 <i class="fa-solid fa-building"></i></h2>
-            <form action="#">
+            <form action="#" id="registerForm">
                 <div class="input-box animation" style="--i:18; --j:1;">
-                    <input type="text" placeholder="Αντωνίου Ιωάννης ή ΕΠΕ">
-                    <label>Fullname or Company Name:</label>
-                    <i class="fa-solid fa-user"></i>or
-                    <i class="fa-solid fa-building"></i>
+                    <input type="text" id="registerUsername" placeholder="iantoniou" required>
+                    <label>Username</label>
+                    <i class="fa-solid fa-user-tag"></i> 
                 </div>
-                <div class="input-box animation" style="--i:19; --j:2;">
-                    <input type="text" placeholder="iantoniou" required>
-                    <label>Username:</label>
-                    <i class="fa-solid fa-user-tag"></i>
-                </div>
-                <div class="input-box animation" style="--i:20; --j:3;"> 
-                    <input type="email" placeholder="antoniouioannis@outlook.com" required>
-                    <label>Email:</label>
+                <div class="input-box animation" style="--i:19; --j:2;"> 
+                    <input type="email" id="registerEmail" placeholder="antoniouioannis@outlook.com" required>
+                    <label>Email</label>
                     <i class="fa-solid fa-at"></i>
                 </div>
-                <div class="input-box animation" style="--i:21; --j:4;">
-                    <input type="password" placeholder="give a complex combination" required>
-                    <label>Password:</label>
+                <div class="input-box animation" style="--i:20; --j:3;">
+                    <input type="password" id="registerPassword" placeholder="give a complex combination" required>
+                    <label>Password</label>
                     <i class="fa-solid fa-key"></i>
                 </div>
-                <button type="submit" class="btn animation" style="--i:22; --j:5;">Εγγραφή</button>
-                <i class="fa-solid fa-user"></i>or
-                <i class="fa-solid fa-building"></i>
-                <div class="logreg-link animation" style="--i:23; --j:6;">
-                    <p>Already have an account? <a href="#" class="login-link">Συνδέσου
+                <button type="submit" class="btn animation" style="--i:21; --j:4;">Εγγραφή</button>
+                
+                <div class="logreg-link animation" style="--i:22; --j:5;">
+                    <p>Εχεις ήδη λογαριασμό? <a href="#" class="login-link">Συνδέσου
                         <i class="fa-solid fa-user-plus"></i></a></p>
                 </div>
             </form>
@@ -87,5 +80,27 @@
     
     <script src="https://kit.fontawesome.com/989fde67b7.js" crossorigin="anonymous"></script>
     <script src="scriptsignup.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    
+    <script type="module">
+      //  SDK 
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Firebase configuration
+      const firebaseConfig = {
+        apiKey: "AIzaSyBWNhP0KYgZu1yJsLqGJ8edcZi4w9Azn0A",
+        authDomain: "iantoniou-portfolio.firebaseapp.com",
+        databaseURL: "https://iantoniou-portfolio-default-rtdb.firebaseio.com",
+        projectId: "iantoniou-portfolio",
+        storageBucket: "iantoniou-portfolio.firebasestorage.app",
+        messagingSenderId: "499945371130",
+        appId: "1:499945371130:web:588fd0a9ae7dae65bb6043"
+      };
+
+      const app = initializeApp(firebaseConfig);
+    </script>
 </body>
 </html>
