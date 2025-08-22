@@ -268,3 +268,37 @@ body{
     color: #fff; font-size: 46px;
 }
 
+/* Για tablets */
+@media (max-width: 992px) {
+    .wrapper {
+        max-width: 90%;
+    }
+    .info-text {
+        display: none; /* Κρύβουμε τα info panels για να έχεις καθαρό layout */
+    }
+}
+
+/* Για κινητά */
+@media (max-width: 600px) {
+    .wrapper {
+        padding: 15px;
+        border: 1px solid #002bff;
+    }
+    .form-box h2 {
+        font-size: 22px;
+    }
+    .input-box input {
+        font-size: 14px;
+    }
+    .input-box label {
+        font-size: 13px;
+    }
+    .btn {
+        font-size: 14px;
+        height: 40px;
+    }
+    .footer {
+        font-size: 14px;
+        height: 40px;
+    }
+}
