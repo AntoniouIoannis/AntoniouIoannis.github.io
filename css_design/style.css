@@ -235,7 +235,7 @@ section:hover {
 }
 #about .wrapper h2::after {
   display: none; 
-
+}
 #about .wrapper h1 {
   font-size: 2.2rem;
   color: #343a40;
