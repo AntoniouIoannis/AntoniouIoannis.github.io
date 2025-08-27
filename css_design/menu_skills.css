@@ -1,0 +1,29 @@
+#skills2 {
+    display: grid;
+    height: 100%;
+    width: auto;
+    place-items: center;
+    background: #212121;
+    color: #c215ae;
+}
+
+.menu2 a {
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 10px 50px;
+    color: #c215ae;
+    /* background: #fff; */
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    letter-spacing: 1px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.menu2 a:hover {
+    background: #07ecf0;
+    transform: scale(1.1);
+}

@@ -3,37 +3,41 @@
   <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ioannis Antoniou - Full-Stack Software Engineer</title>
+  <title>Ioannis Antoniou Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="signup-hover.css">
-  <link rel="stylesheet" href="border_animation.css">
-  <link rel="stylesheet" href="github-projects.js">
-</head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="./css_design/style.css">
+  <link rel="stylesheet" href="./css_design/signup-hover.css">
+  <link rel="stylesheet" href="./css_design/border_animation.css">
+  <link rel="stylesheet" href="./css_design/cards_skills/.css">
+  <link rel="stylesheet" href="./js_action/github-projects.js">
+  </head>
   <body>
-    <body>
-    <div class="container-fluid bg-dark text-white p-3 d-flex align-items-center justify-content-between sticky-top-bar">
+    <div class="container-fluid text-black p-1 d-flex align-items-center justify-content-between sticky-top-bar">
       <div class="day">
         <span id="date" class="ms-2"></span>
         <span id="time" class="ms-2"></span>
       </div>
-      <a href="./signLoginBusiness.html" class="btn-glow btn-login">Εγγραφή / Σύνδεση</a>
-    </div>
+      <!-- <p>Full-Stack Software Engineer<br>Ioannis Antoniou</p> -->
+      <a href="./html_content/signLoginBusiness.html" class="btn-glow btn-login ">Εγγραφή / Σύνδεση</a>
+    </div>    
     <header class="hero-image text-green text-center d-flex align-items-center justify-content-center">
       <video autoplay loop muted playsinline class="bg-video">
         <source src="./img/bg-header.mp4" type="video/mp4">
         Το browser σου δεν υποστηρίζει video.
       </video>
       <div class="header-content">
-      
+
       <div class="container">
+        
       <h1 class="display-4 fw-bold">Full-Stack Software Engineer Ioannis Antoniou</h1>
-      <h2>Καλώς ήρθες στην ιστοσελίδα μου.</h2>
+      <h2>Καλώς ήρθες στον ιστότοπό μου.</h2>
       
       <nav class="mt-6">
-        <a href="#about" class="btn btn-outline-light m-1">Σχετικά...</a><hr>
-        <a href="#education" class="btn btn-outline-light m-1">Η Εκπαίδευσή μου</a>
-        <a href="#selftaught" class="btn btn-outline-light m-1">Αυτοδίδακτος σε...</a>
+        <a href="#about" class="btn btn-outline-dark fw-bolder m-2">Σχετικά...</a><hr>
+        <a href="#education" class="btn btn-outline-danger m-1">Η Εκπαίδευσή μου</a>
+        <a href="#selftaught" class="btn btn-outline-warning fw-bold m-1">Αυτοδίδακτος σε...</a>
+        <a href="#skills" class="btn btn-outline-light m-3">Οι Δεξιότητές μου</a>
         <a href="#projects" class="btn btn-outline-light m-1">Projects</a>
         <a href="#contact" class="btn btn-outline-light m-1">Επικοινωνήστε μαζί μου</a>
         
@@ -74,6 +78,7 @@
         </div>
         <img src="./img/me-in_side_half.png" alt="my photo" style="width: auto; height: 700px;">
       </div>
+      <a href="#">Top</a>
     </section>
 
     <section id="education">
@@ -93,31 +98,196 @@
         </li>
         <li><strong>1991:</strong> Πτυχίο Τ.Ε.Λ.(Τεχνικό Επαγγελματικό Λύκειο) <br> Προγραμματιστής Ηλεκτρονικών Υπολογιστών</li>
       </ul>
+      <a href="#">Top</a>
     </section>
 
-    <section id="skills">
-      <h2>Δεξιότητες</h2>
+    <div class="card">
+  <img src="./img/bg-clock.png" class="card-img-top" alt="school">
+
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+
+<div class="card" aria-hidden="true">
+  <img src="./img/bg-header.mp4" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title placeholder-glow">
+      <span class="placeholder col-6"></span>
+    </h5>
+    <p class="card-text placeholder-glow">
+      <span class="placeholder col-7">one </span>
+      <span class="placeholder col-4">two</span>
+      <span class="placeholder col-4">three</span>
+      <span class="placeholder col-6"></span>
+      <span class="placeholder col-8"></span>
+    </p>
+    <a class="btn btn-primary disabled placeholder col-6" aria-disabled="true"></a>
+  </div>
+</div>
+
+    <section class="cards" id="education">
+      <h2>Η Εκπαίδευσή μου</h2>
       <ul>
-        <li>Java SE, Jakarta, JUnit, Hibernate, JDBC</li>
-        <li>Python, .NET, ASP.NET, REST APIs</li>
-        <li>SQL / NoSQL, Power BI</li>
-        <li>HTML5, CSS3, JavaScript, Bootstrap</li>
-        <li>AJAX, jQuery, UI/UX</li>
-        <li>Node.js, Angular.js</li>
-        <li>OOP, MVC, SOA, DAO, DTO</li>
-        <li>Android Studio, AI2, x.Thunkable</li>
+        <li>
+          <strong>2025:</strong> Software Engineering Education - Coding Factory, <br> Οικονομικό Πανεπιστήμιο Αθηνών.
+        </li>
+        <li><strong>2023:</strong> Web Development <br> Οικονομικό Πανεπιστήμιο Αθηνών.</li>
+        <li><strong>2021 - Σήμερα:</strong> Προπτυχιακό Πρόγραμμα Σπουδών Πληροφορικής <br> ΕΑΠ (Ελληνικό Ανοικτό Πανεπιστήμιο) </li>
+        <li>
+          <strong>2010:</strong> Δίπλωμα Τεχνικός Εφαρμογών Πληροφορικής <br>
+          Ε.Ο.Π.Π.Ε.Π. (Εθνικός Οργανισμός πιστοποίησης προσόντων και επαγγελματικού προσανατολισμού)
+        </li>
+        <li>
+          <strong>2008:</strong> Ι.Ε.Κ. Χαλκίδας - Τεχνικός Εφαρμογών Πληροφορικής
+        </li>
+        <li><strong>1991:</strong> Πτυχίο Τ.Ε.Λ.(Τεχνικό Επαγγελματικό Λύκειο) <br> Προγραμματιστής Ηλεκτρονικών Υπολογιστών</li>
       </ul>
+      <a href="#">Top</a>
+    </section>
+
+    <section id="skills" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Οι Δεξιότητές μου</h2>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                <!-- Card 1 -->
+                <div class="col">
+                    <div class="card skill-card h-100">
+                        <div class="card-header text-center py-3">
+                            <i class="bi bi-code-slash fs-1"></i>
+                            <h5 class="card-title mt-2">Backend Development</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Java SE, Jakarta</li>
+                                <li class="list-group-item">JUnit, Hibernate, JDBC</li>
+                                <li class="list-group-item">Python, .NET, ASP.NET</li>
+                                <li class="list-group-item">REST APIs</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="col">
+                    <div class="card skill-card h-100">
+                        <div class="card-header text-center py-3">
+                            <i class="bi bi-database fs-1"></i>
+                            <h5 class="card-title mt-2">Βάσεις Δεδομένων & Analytics</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">SQL / NoSQL</li>
+                                <li class="list-group-item">Power BI</li>
+                                <li class="list-group-item">Data Modeling</li>
+                                <li class="list-group-item">Database Optimization</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="col">
+                    <div class="card skill-card h-100">
+                        <div class="card-header text-center py-3">
+                            <i class="bi bi-window-fullscreen fs-1"></i>
+                            <h5 class="card-title mt-2">Frontend Development</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">HTML5, CSS3, JavaScript</li>
+                                <li class="list-group-item">Bootstrap</li>
+                                <li class="list-group-item">AJAX, jQuery</li>
+                                <li class="list-group-item">UI/UX Design Principles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="col">
+                    <div class="card skill-card h-100">
+                        <div class="card-header text-center py-3">
+                            <i class="bi bi-diagram-3 fs-1"></i>
+                            <h5 class="card-title mt-2">Αρχιτεκτονικές & Frameworks</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Node.js, Angular.js</li>
+                                <li class="list-group-item">OOP, MVC</li>
+                                <li class="list-group-item">SOA, DAO, DTO</li>
+                                <li class="list-group-item">Microservices</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="col">
+                    <div class="card skill-card h-100">
+                        <div class="card-header text-center py-3">
+                            <i class="bi bi-phone fs-1"></i>
+                            <h5 class="card-title mt-2">Mobile Development</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Android Studio</li>
+                                <li class="list-group-item">AI2</li>
+                                <li class="list-group-item">x.Thunkable</li>
+                                <li class="list-group-item">Mobile UI/UX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="col">
+                    <div class="card skill-card h-100">
+                        <div class="card-header text-center py-3">
+                            <i class="bi bi-tools fs-1"></i>
+                            <h5 class="card-title mt-2">Εργαλεία & Μεθοδολογίες</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Git & Version Control</li>
+                                <li class="list-group-item">Agile/Scrum</li>
+                                <li class="list-group-item">Testing & Debugging</li>
+                                <li class="list-group-item">CI/CD</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills2">
+      <h2>Δεξιότητες</h2>   <!--  se kaue selida ua δειχνω επιλεκτικα τα εργα μου. -->
+      <nav class="menu2">
+        <a href="java.html">Java SE, Jakarta, JUnit, Hibernate, JDBC</a>
+        <a href="python.html">Python, .NET, ASP.NET, REST APIs</a>
+        <a href="sgl_nosgl.html">SQL / NoSQL, Power BI</a>
+        <a href="web_dev.html">HTML5, CSS3, JavaScript, Bootstrap</a>
+        <a href="ui_ux.html">AJAX, jQuery, UI/UX</a>
+        <a href="platform_js.html">Node.js, Angular.js, React.js</a>  
+        <a href="constarction.html">OOP, MVC, SOA, DAO, DTO</a>
+        <a href="mobile_dev.html">Android Studio, AI2, x.Thunkable</a>
+    </nav>
+    <a href="#">Top</a>
     </section>
 
     <section id="selftaught">
       <h2>Αυτοδίδακτος σε...</h2>
       <ul>
-        <li>AI2 https://appinventor.mit.edu/ </li>
+        <li>AI2 App Inventor</li>
         <li>X.Thunkable</li>
         <li>Digital Marketing Google</li>
-        <li>Coursera Azure Fundamental</li>
-        <li>Joomla</li>
+        <li>Coursera [Azure Fundamental]</li>
+        <li>CMS Joomla</li>
       </ul>
+      <a href="#">Top</a>
     </section>
 
     <section id="projects" class="container my-5">
@@ -125,6 +295,7 @@
       <div class="row" id="repo-list">
         <!-- Repos θα μπουν εδώ δυναμικά με JS -->
       </div>
+      <a href="#">Top</a>
     </section>
 
     <section id="cv">
@@ -133,6 +304,7 @@
         Μπορείτε να δείτε το βιογραφικό μου σε μορφή PDF κάνοντας κλικ στο παρακάτω κουμπί:
       </p>
       <a href="/img/cv_AntoniouIoannis.pdf" class="btn btn-primary" target="_blank">Κατέβασέ το</a>
+      <br><a href="#">Top</a>
     </section>
 
 
@@ -161,35 +333,42 @@
       </p>
     </section>
 
-    <footer>
+    <section id="footer">
       <p><b>© All right reserved 2025</b> Ioannis Antoniou || FULL-STACK SOFTWARE ENGINEER</p>
       <i>Προσωπική ιστοσελίδα για την παρουσίαση των έργων και της εκπαίδευσής μου.</i>
       <p>Αναπτύχθηκε με HTML5, CSS3, JavaScript και Bootstrap 5.3.</p>
-      <p>Υποστήριξη GitHub Pages [ Δες το <a href="https://docs.github.com/en/pages" target="_blank">Documentation</a>  οπου υλοποίησα το my Portfolio GitHub Pages!!! ]</p>
+      <p>Υποστήριξη GitHub Pages [ Δες το <a href="https://docs.github.com/en/pages" target="_blank">
+        Documentation</a>  οπου υλοποίησα το my Portfolio GitHub Pages!!! ]</p>
       <p>Σε ευχαριστώ για την επίσκεψη.</p>
-    </footer>
+    </section>
+    <div class="container-fluid text-black p-1 d-flex align-items-center justify-content-between sticky-bottom">
+      <p>Full-Stack Software Engineer <br> Ioannis Antoniou</p>
+      <a href="#top">Top</a>
+    </div>
+    <!-- <div class="container-fluid text-black p-3 d-flex align-items-center justify-content-between fixed-bottom">
+      <p class="mb-0">Full-Stack Software Engineer <br> Ioannis Antoniou</p>
+      <a href="#top" class="text-decoration-none">Top ↑</a>
+    </div> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="clock.js"></script>
-    <script src="github-projects.js"></script>
-    <script src="scriptclock.js"></script>
-    <script src="scriptsignup.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./js_action/clock.js"></script>
+    <script src="./js_action/github-projects.js"></script>
+    <script src="./js_action/scriptclock.js"></script>
+    <script src="./js_action/scriptsignup.js"></script>
     <script>
-        var typingEffect = new Typed (".multiText", 
-        {
-            strings: ["Web Tech [HTML5/CSS3/JS]", "CMS [WordPress]", ".NET/ASP.NET ", "Flutter/Dart", "JavaScript [React/React Native]", "JavaScript [Angular.js/Node.js]"],
+        var typingEffect = new Typed (".multiText", {
+            strings: ["Web Tech [HTML5/CSS3/JS]", "CMS [WordPress]", ".NET/ASP.NET ", "Flutter/Dart", 
+            "JavaScript [React/React Native]", "JavaScript [Angular.js/Node.js]"],
             loop: true, typeSpeed: 100, backSpeed: 80, backDelay: 1000
-        }
-        )
+        })
     </script>
     <script>
-        var typingEffect = new Typed (".multiText2", 
-        {
-            strings: ["SOFTWARE ENGINEERING EDUCATION", "Coding Factory του", "Οικονομικού Πανεπιστημίου Αθηνών."],
+        var typingEffect = new Typed (".multiText2", {
+            strings: ["SOFTWARE ENGINEERING EDUCATION", "Coding Factory του", 
+            "Οικονομικού Πανεπιστημίου Αθηνών."],
             loop: true, typeSpeed: 150, backSpeed: 100, backDelay: 800
-        }
-        )
+        })
     </script>
   </body>
 </html>
