@@ -1,7 +1,10 @@
 body {
-  font-family:'Times New Roman', Times, serif;
-  margin: 0; padding: 0;
-  line-height: 1.6; color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 0;
+  line-height: 1.6; 
+  color: #333;
+  background-color: #f4f7f6;
 }
 
 :focus-visible {
@@ -10,11 +13,13 @@ body {
   background-color: #e6f2ff;
   border-radius: 4px; 
 }
+
 .day {
   display: flex;
-  flex-direction: column; /* Κάθετη στοίχιση */
-  line-height: 1.2       /* Λίγο μικρότερο κενό μεταξύ γραμμών */
+  flex-direction: column; 
+  line-height: 1.2;
 }
+
 #date {
   font-family: 'Times New Roman', Times, serif;
   color: #227108fd;
@@ -22,6 +27,7 @@ body {
   text-shadow: 0 0 15px black;
   text-align: center;
 }
+
 #time {
   font-family: 'Audiowide', cursive;
   color: #0000ff;
@@ -34,32 +40,50 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
+  /* background-color: rgba(255, 255, 255, 0.85); */
+  /* backdrop-filter: blur(5px); */
 }
+
 .sticky-bottom {
   position: sticky;
+  bottom: 0;
+  /* background-color: #f8f9fa; */
+  z-index: 999;
 }
 
 header {
   position: relative;
   height: 100vh; 
   overflow: hidden;
-  color: rgb(232, 30, 30);
+  color: white;
   text-align: center;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-size: cover;
-  background-position: center;
-  color: rgb(236, 200, 24);
-  padding: 20px 0;
-  text-align: center;
+  padding: 20px;
 }
 
 .bg-video {
-  position: absolute;  opacity: 0.5;  /* relative  ?? */
-  top: 0;   left: 0;
-  width: 100%;   height: 100%;
-  object-fit: cover;   z-index: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  z-index: -2;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
 }
 
 .header-content {
@@ -67,87 +91,22 @@ header {
   z-index: 1;
   padding: 20px;
   max-width: 100%;
-}
-
-.header-content .container {
-  max-width: 100%;
+  color: white;
 }
 
 .header-content h1 {
-  font-size: 2rem;
-  word-wrap: break-word;
+    font-size: 3rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 
 .header-content h2 {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
-  font-size: 20px;
-}
-
-header p {
-  margin: 5px 0 15px;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  color: rgb(202, 20, 20);
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Ενότητες */
-/* section {
-  max-width: 90%;
-  margin: 30px auto;
-  background: azure;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(240, 11, 30, 0.1);
-} */
-
-section h2 {
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin-bottom: 10px;
-}
-
-a {
-  color: #2980b9;
-}
-
-a:hover {
-  color: #1c5d88;
-}
-.btn-login{
-  /* position: absolute; */
-  top: 5px;    /* Προσαρμόστε την απόσταση από την κορυφή */
-  right: 25px;  /* Προσαρμόστε την απόσταση από δεξιά */
-  bottom: 5px;
-  /* bottom: 45px; Προσαρμόστε την απόσταση από το κάτω μέρος */
-  justify-content: right;
-  display: flex;
-  align-items: center;
-  padding: 2.5rem 1rem;
+.header-content nav a {
+    border-width: 2px;
 }
 
 section {
@@ -162,46 +121,38 @@ section {
 }
 
 section:hover {
-  transform: translateY(-6px); /* Διακριτικό εφέ "ανύψωσης" κατά το hover */
+  transform: translateY(-6px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-
-#about {
-  /* Ένα διακριτικό gradient δίνει βάθος */
-  background: linear-gradient(135deg, rgba(248, 249, 250, 0.4) 0%, #ffffff 100%);
-}
-
 #about .text-photo {
-  gap: 3rem; /* Αυξάνω το κενό μεταξύ κειμένου και εικόνας */
+  gap: 3rem;
 }
 
-/* στυλ  εικόνα προφίλ */
 #about img {
   width: 100%;
-  max-width: 500px; /* Ορίζουμε μέγιστο πλάτος για καλύτερη απόκριση */
+  max-width: 500px;
   height: auto;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /*  έντονη σκιά για να ξεχωρίζει */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 #about img:hover {
-  transform: scale(1.05); /* Εφέ ζουμ κατά το hover */
+  transform: scale(1.05);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
 }
 
 #about h2 {
   font-size: 2.8rem;
   font-weight: 700;
-  color: #2c3e50; /* Σκούρο μπλε-γκρι για ισχυρή αντίθεση */
+  color: #2c3e50;
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 15px;
 }
 
-/* Διακοσμητική γραμμή κάτω από τον τίτλο για έμφαση */
 #about h2::after {
   content: '';
   position: absolute;
@@ -209,83 +160,94 @@ section:hover {
   left: 0;
   width: 70px;
   height: 5px;
-  background: linear-gradient(90deg, #007bff, #0056b3); /* Gradient για τη γραμμή */
+  background: linear-gradient(90deg, #007bff, #0056b3);
   border-radius: 3px;
 }
 
-/* Καλύτερη οργάνωση του κειμένου μέσα στο .wrapper */
-#about .wrapper .topline {
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #6c757d; /* Ουδέτερο γκρι */
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-#about .wrapper .topline::after {
-    display: none; /* Αφαιρούμε την παλιά γραμμή */
-}
-
-/* Τα h2 και h1 μέσα στο wrapper λειτουργούν ως υπότιτλοι */
-#about .wrapper h2 {
-  font-size: 2rem;
-  color: #343a40;
-  margin-bottom: 8px;
-  padding-bottom: 0;
-  font-weight: 500;
-}
-#about .wrapper h2::after {
-  display: none; 
-}
-#about .wrapper h1 {
-  font-size: 2.2rem;
-  color: #343a40;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-/* Νέο, πιο ζωντανό χρώμα για το κείμενο που αλλάζει */
-#about .multiText, #about .multiText2 {
+#about .multiTextDevs, #about .multiTextEdu {
   color: #007bff; 
   text-transform: capitalize;
 }
 
-/* Βελτίωση αναγνωσιμότητας για τις παραγράφους */
 #about p {
   font-size: 1.15rem;
   line-height: 1.8;
   color: #495057; 
 }
 
-#skills2{
-  color: #007bff;
-  background-color: #e6f2ff;
+/* Education Card Styles */
+#education {
+    background-color: #f8f9fa;
+}
+
+.education-card {
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.education-card .card-img-top {
+    height: 120px;
+    object-fit: contain;
+    padding: 1rem;
+    background-color: #ffffff;
+}
+
+.education-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.education-card .card-title {
+    font-weight: bold;
+    color: #343a40;
+}
+
+.education-card .card-text {
+    flex-grow: 1;
 }
 
 #footer {
-  /* background-image: url('../img/skills-bg.jpg'); */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   background-color: #2c3e50;
   color: white;
   margin-top: 30px;
+  border-radius: 0;
 }
-.photo-gallery {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+
+#footer a {
+    color: #a7d1e8;
 }
-.photo-gallery img {
-  max-height: 800px;
-  width: auto;
-  border-radius: 10px;
+
+@media (max-width: 992px) {
+  #about .text-photo {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #about .text-photo .flex-grow-1 {
+    margin-right: 0 !important;
+    margin-bottom: 2.5rem;
+  }
+
+  #about h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 768px) {
   .header-content h1 {
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .header-content h2 {
     font-size: 1.2rem;
@@ -295,33 +257,7 @@ section:hover {
     padding: 8px 12px;
     font-size: 0.9rem;
   }
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
   section {
-    margin: 20px;
-  }
-  #skills h2 {
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    padding: 2rem;
   }
 }
-
-@media (max-width: 992px) {
-  #about .text-photo {
-    flex-direction: column; /* Στοίχιση σε στήλη σε μικρές οθόνες */
-    text-align: center; /* Κεντράρισμα του κειμένου */
-  }
-
-  #about .text-photo .flex-grow-1 {
-    margin-right: 0 !important;
-    margin-bottom: 2.5rem;
-  }
-
-  /* Κεντράρισμα της διακοσμητικής γραμμής */
-  #about h2::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-

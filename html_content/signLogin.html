@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Εγγραφή / Σύνδεση Χρήστη</title>
+    <link rel="stylesheet" href="../css_design/signLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <a href="../index.html" class="back-to-home-btn"><i class="fas fa-arrow-left"></i> Επιστροφή στην Αρχική</a>
+
+    <div class="wrapper">
+        <span class="bg-animate"></span>
+        <span class="bg-animate2"></span>
+        <div class="form-box login">
+            <h2 class="animation" style="--i:0; --j:21;">Είσοδος <i class="fa-solid fa-person-walking-luggage"></i></h2>
+            <form action="#">
+                <div class="input-box animation" style="--i:1; --j:22;">
+                    <input type="text" required>
+                    <label>Όνομα Χρήστη:</label>
+                    <i class="fa-solid fa-user-tag"></i>
+                </div>
+                <div class="input-box animation" style="--i:2; --j:23;">
+                    <input type="password" required>
+                    <label>Κωδικός:</label>
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <button type="submit" class="btn animation" style="--i:3; --j:24;">Είσοδος <i class="fa-solid fa-right-to-bracket"></i></button>
+                <div class="logreg-link animation" style="--i:4; --j:25;">
+                    <p>Δεν έχετε λογαριασμό; <a href="#" class="register-link">Εγγραφή <i class="fa-solid fa-user-plus"></i></a></p>
+                </div>
+            </form>
+        </div>
+        <div class="info-text login">
+            <h2 class="animation" style="--i:0; --j:20;">Καλώς ήρθες!</h2>
+            <p class="animation" style="--i:1; --j:21;">Χαίρομαι που σε βλέπω ξανά. Συνδέσου για να δεις τα νέα έργα και τις υπηρεσίες μου.</p>
+        </div>
+
+        <div class="form-box register">
+            <h2 class="animation" style="--i:17; --j:0;">Εγγραφή</h2>
+            <form action="#" id="registerForm">
+                <div class="input-box animation" style="--i:18; --j:1;">
+                    <input type="text" id="registerUsername" required>
+                    <label>Όνομα Χρήστη</label>
+                    <i class="fa-solid fa-user-tag"></i>
+                </div>
+                <div class="input-box animation" style="--i:19; --j:2;">
+                    <input type="email" id="registerEmail" required>
+                    <label>Email</label>
+                    <i class="fa-solid fa-at"></i>
+                </div>
+                <div class="input-box animation" style="--i:20; --j:3;">
+                    <input type="password" id="registerPassword" required>
+                    <label>Κωδικός</label>
+                    <i class="fa-solid fa-key"></i>
+                </div>
+                <button type="button" id="openPswGenerator" class="btn-link animation" style="--i:21; --j:4;">Δημιουργία Κωδικού <i class="fas fa-cogs"></i></button>
+                <button type="submit" class="btn animation" style="--i:22; --j:5;">Εγγραφή</button>
+                <div class="logreg-link animation" style="--i:23; --j:6;">
+                    <p>Έχεις ήδη λογαριασμό; <a href="#" class="login-link">Σύνδεση <i class="fa-solid fa-user-check"></i></a></p>
+                </div>
+            </form>
+        </div>
+        <div class="info-text register">
+            <h2 class="animation" style="--i:17; --j:0;">Καλώς Ήρθες!</h2>
+            <p class="animation" style="--i:18; --j:1;">Δημιούργησε τον λογαριασμό σου για να εξερευνήσεις όλες τις δυνατότητες.</p>
+        </div>
+    </div>
+
+    <div id="pswGeneratorModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Password Generator</h2>
+            <div class="inputBox">
+                <input type="text" class="passBox" id="passBox" disabled>
+                <span class="material-icons" id="copyIcon">content_copy</span>
+            </div>
+            <input type="range" min="8" max="20" value="12" id="inputSlider">
+            <div class="row">
+                <p>Μήκος Κωδικού</p>
+                <span id="sliderValue">12</span>
+            </div>
+            <div class="row">
+                <label for="lowercase">Πεζά Γράμματα (a-z)</label>
+                <input type="checkbox" id="lowercase" checked>
+            </div>
+            <div class="row">
+                <label for="uppercase">Κεφαλαία Γράμματα (A-Z)</label>
+                <input type="checkbox" id="uppercase" checked>
+            </div>
+            <div class="row">
+                <label for="numbers">Αριθμοί (0-9)</label>
+                <input type="checkbox" id="numbers" checked>
+            </div>
+            <div class="row">
+                <label for="symbols">Σύμβολα (@-*)</label>
+                <input type="checkbox" id="symbols" checked>
+            </div>
+            <button type="button" class="genBtn" id="genBtn">Δημιουργία</button>
+            <button type="button" class="useBtn" id="useBtn">Χρήση Κωδικού</button>
+        </div>
+    </div>
+
+    <script src="../js_action/scriptsignup.js"></script>
+    <script>
+        // Modal Logic
+        const modal = document.getElementById('pswGeneratorModal');
+        const openModalBtn = document.getElementById('openPswGenerator');
+        const closeModalBtn = document.querySelector('.close-btn');
+
+        openModalBtn.onclick = () => modal.style.display = 'block';
+        closeModalBtn.onclick = () => modal.style.display = 'none';
+        window.onclick = (event) => {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        };
+
+        // Password Generator Logic
+        const inputSlider = document.getElementById("inputSlider");
+        const sliderValue = document.getElementById("sliderValue");
+        const passBox = document.getElementById("passBox");
+        const lowercaseEl = document.getElementById("lowercase");
+        const uppercaseEl = document.getElementById("uppercase");
+        const numbersEl = document.getElementById("numbers");
+        const symbolsEl = document.getElementById("symbols");
+        const generateBtn = document.getElementById("genBtn");
+        const copyIcon = document.getElementById("copyIcon");
+        const useBtn = document.getElementById("useBtn");
+        const registerPassword = document.getElementById("registerPassword");
+
+        const lowerChars = "abcdefghijklmnopqrstuvwxyz";
+        const upperChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const allNumbers = "0123456789";
+        const allSymbols = "~!@#$%^&*";
+
+        sliderValue.textContent = inputSlider.value;
+        inputSlider.addEventListener("input", () => {
+            sliderValue.textContent = inputSlider.value;
+            generatePassword();
+        });
+
+        generateBtn.addEventListener("click", generatePassword);
+
+        function generatePassword() {
+            let genPassword = "";
+            let allChars = "";
+            allChars += lowercaseEl.checked ? lowerChars : "";
+            allChars += uppercaseEl.checked ? upperChars : "";
+            allChars += numbersEl.checked ? allNumbers : "";
+            allChars += symbolsEl.checked ? allSymbols : "";
+
+            if (allChars == "" || allChars.length == 0) {
+                return;
+            }
+            
+            let i = 1;
+            while (i <= inputSlider.value) {
+                genPassword += allChars.charAt(Math.floor(Math.random() * allChars.length));
+                i++;
+            }
+            passBox.value = genPassword;
+        }
+        
+        copyIcon.addEventListener("click", () => {
+            if(passBox.value != "" || passBox.value.length >=1){
+                navigator.clipboard.writeText(passBox.value);
+                copyIcon.innerText = "check";
+                copyIcon.title = "Password Copied";
+                setTimeout(()=>{
+                    copyIcon.innerHTML = "content_copy";
+                    copyIcon.title = "";
+                }, 3000)
+            }
+        });
+
+        useBtn.addEventListener("click", () => {
+            if(passBox.value !== "") {
+                registerPassword.value = passBox.value;
+                modal.style.display = 'none';
+            }
+        });
+
+        // Initial password generation
+        generatePassword();
+    </script>
+</body>
+</html>
