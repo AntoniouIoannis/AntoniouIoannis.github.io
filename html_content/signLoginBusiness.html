@@ -8,12 +8,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>      <!-- https://www.youtube.com/watch?v=mefhyo7W3nk || Login and Registration Form in HTML & CSS-->
-    <div class="container-fluid text-black p-1 d-flex align-items-center justify-content-between sticky-top-bar">
-      <a href="./index.html"><-- Αρχική Σελίδα...</a>
-      <p>Full-Stack Software Engineer <br> Ioannis Antoniou</p>
-      <a href="./index.html"><-- Αρχική Σελίδα...</a>
-    </div>
-    
     <div class="wrapper">
         <span class="bg-animate"></span>
         <span class="bg-animate2"></span>
@@ -25,7 +19,6 @@
                     <label>Username:</label>
                     <i class="fa-solid fa-user-tag"></i>
                 </div>
-                
                 <div class="input-box animation" style="--i:2; --j:23;">
                     <input type="password" placeholder="enter the password you registered." required>
                     <label>Password:</label>
@@ -65,21 +58,16 @@
                 <button type="button" class="btn-link"><a href="../html_content/pswGenerator.html">password generator [btn]</a></button> -->
                 <a href="../html_content/pswGenerator.html" class="btn-link">password generator[a ref]</a>
                 <button type="submit" class="btn animation" style="--i:21; --j:4;">Εγγραφή</button>
-                
                 <div class="logreg-link animation" style="--i:22; --j:5;">
                     <p>Εχεις ήδη λογαριασμό? <a href="#" class="login-link">Συνδέσου!
                         <i class="fa-solid fa-user-plus"></i></a></p>
                 </div>
-                
             </form>
         </div>
         <div class="info-text register">
             <h2 class="animation" style="--i:17; --j:0;">Welcome Back!</h2>
             <p class="animation" style="--i:18; --j:1;">We are glad to see you again. Please log in to continue using our services.</p>
         </div>
-    </div>
-    <div class="footer">
-        <a href="./index.html"><-- Αρχική Σελίδα...</a>
     </div>
     
     <script src="https://kit.fontawesome.com/989fde67b7.js" crossorigin="anonymous"></script>
@@ -103,7 +91,6 @@
         messagingSenderId: "499945371130",
         appId: "1:499945371130:web:588fd0a9ae7dae65bb6043"
       };
-
       const app = initializeApp(firebaseConfig);
     </script>
 </body>
