@@ -10,9 +10,37 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #081b29;
+    background: #123954;
     padding: 20px;
 }
+.sticky-top-bar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.day {
+  display: flex;
+  flex-direction: column; 
+  line-height: 1.2;
+}
+
+#date {
+  font-family: 'Times New Roman', Times, serif;
+  color: #227108fd;
+  font-size: 1rem;
+  text-shadow: 0 0 15px black;
+  text-align: center;
+}
+
+#time {
+  font-family: 'Audiowide', cursive;
+  color: #0000ff;
+  font-size: 1.1rem;
+  text-shadow: 0 0 5px black;
+  text-align: center;
+}
+
 
 .back-to-home-btn {
     position: absolute;
