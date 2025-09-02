@@ -28,7 +28,7 @@ local repo pathname: [ C:\Users\ganton\OneDrive - Viohalco SA\AntoniouIoannis.gi
  
 ## 🚀 How to Run
 
-write " i-antoniou.gr " in your favorite Browser!!!
+
 or  <a href="http://i-antoniou.gr/" target=_blank>Click here!</a>
  
 ```bash
