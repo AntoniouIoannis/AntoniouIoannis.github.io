@@ -1,6 +1,5 @@
 .btn-glow-border {
   position: relative;
-  border: none !important; 
   overflow: hidden;
   transition: 0.3s;
   background-color: transparent; /* Διάφανο φόντο */
@@ -44,7 +43,7 @@
   top: 0;
   left: -100%;
   width: 100%;
-  height: 14px;
+  height: 10px;
   animation: animate1 1.5s linear infinite, glowing 20s linear infinite;
 }
 
