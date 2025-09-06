@@ -73,3 +73,7 @@ body {
     text-transform: uppercase;
     line-height: 0.6em;
 }
+.progress-bars .circle[data-color="#F7DF1E"] .number,
+.progress-bars .circle[data-color="#F7DF1E"] h4 {
+    color: #333; /* Εδω έδωσα σκούρο χρώμα για καλύτερη ανάγνωση στο κίτρινο */
+}
