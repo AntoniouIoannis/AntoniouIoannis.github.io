@@ -383,6 +383,10 @@ section:hover {
   --clr: #00ffcc;
 }
 
+.mt-4.wrapper a:nth-child(7) {
+  --clr: #bb17e8;
+}
+
 
 @media (max-width: 992px) {
   #about .text-photo {
