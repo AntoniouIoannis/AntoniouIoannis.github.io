@@ -4,27 +4,26 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
-.bg-video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: transparent; /* Αλλαγή από #363636 σε transparent */
+    padding: 20px;
+    position: relative;
+    z-index: 1;
 }
-
 .progress-bars {
-  height: 100vh;      
-  display: flex; 
-  flex-wrap: wrap;
-  flex-direction: column;  
-  justify-content: center; 
-  align-items: center; 
-  gap: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 100%;
+    z-index: 2; /* Σιγουρεύουμε ότι είναι πάνω από το βίντεο */
 }
-
 .progress-bars .circle {
     position: relative;
     display: flex;
@@ -34,7 +33,7 @@
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    background: conic-gradient(#333 0deg, #333 0deg); /* Προσθήκη */
+    background: conic-gradient(#333 0deg, #333 0deg);
 }
 .progress-bars .circle::before {
     content: '';
@@ -43,7 +42,7 @@
     border-radius: 50%;
     background: #222;
     opacity: 0.8;
-    z-index: 1; /* Προσθήκη */
+    z-index: 1;
 }
 .progress-bars .circle::after {
     content: '';
@@ -58,14 +57,16 @@
     0 -2px 2px rgba(255, 255, 255, 0.5),
     inset 0 4px 2px rgba(0, 0, 0, 0.25),
     inset 0 -2px 2px rgba(255, 255, 255, 0.5);
-    z-index: 1; /* Προσθήκη */
+    z-index: 1;
 }
 .progress-bars .circle .number {
     position: relative;
-    color: aquamarine;
+    color: #04fc43; /* Εντονο πράσινο χρώμα */
     z-index: 10;
     line-height: 1em;
     font-size: 2em;
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Προσθήκη σκιάς για καλύτερη ανάγνωση */
 }
 .progress-bars .circle .number span {
     font-weight: 500;
@@ -73,17 +74,72 @@
 }
 .progress-bars .circle h4 {
     position: relative;
-    color: aquamarine;
+    color: #04fc43; /* Εντονο πράσινο χρώμα */
     z-index: 10;
     font-weight: 500;
     font-size: 0.8em;
     text-transform: uppercase;
     line-height: 0.6em;
+    margin-top: 10px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Προσθήκη σκιάς για καλύτερη ανάγνωση */
 }
 
+/* Κίτρινο κείμενο για JavaScript */
+.progress-bars .circle[data-color="#F7DF1E"] .number,
+.progress-bars .circle[data-color="#F7DF1E"] h4 {
+    color: #333;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.7); /* Λευκή σκιά για καλύτερη ανάγνωση */
+}
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .progress-bars {
+        gap: 30px;
+    }
+    .progress-bars .circle {
+        width: 150px;
+        height: 150px;
+    }
+    .progress-bars .circle::after {
+        width: 90px;
+        height: 90px;
+        border-width: 10px;
+    }
+    .progress-bars .circle .number {
+        font-size: 1.5em;
+    }
+}
 
+@media (max-width: 480px) {
+    .progress-bars {
+        gap: 20px;
+        flex-direction: column;
+    }
+    .progress-bars .circle {
+        width: 130px;
+        height: 130px;
+        margin: 10px 0;
+    }
+    .progress-bars .circle::after {
+        width: 80px;
+        height: 80px;
+        border-width: 8px;
+    }
+    .progress-bars .circle .number {
+        font-size: 1.3em;
+    }
+    .progress-bars .circle h4 {
+        font-size: 0.7em;
+    }
+}
 
-
-
-
+/* Στυλ για το βίντεο background */
+.bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2; /* Πίσω από όλα */
+}
