@@ -6,7 +6,7 @@
 }
 
 .progress-bars {
-  min-height: 100vh;      
+  height: 100vh;      
   display: flex; 
   flex-wrap: wrap;
   flex-direction: column;  
@@ -70,6 +70,7 @@
     text-transform: uppercase;
     line-height: 0.6em;
 }
+
 
 
 
