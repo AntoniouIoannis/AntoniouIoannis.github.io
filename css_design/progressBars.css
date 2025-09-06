@@ -4,14 +4,7 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-/* body {
-  min-height: 100vh;      
-  display: flex;          
-  flex-direction: column;  
-  justify-content: center; 
-  align-items: center;     
-  padding: 25px;
-} */
+
 .progress-bars {
   min-height: 100vh;      
   display: flex; 
@@ -77,6 +70,7 @@
     text-transform: uppercase;
     line-height: 0.6em;
 }
+
 
 
 
