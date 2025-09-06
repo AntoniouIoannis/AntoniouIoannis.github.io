@@ -13,11 +13,12 @@ body {
   padding: 25px;
 }
 .progress-bars {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
+  min-height: 100vh;      
+  display: flex;          
+  flex-direction: column;  
+  justify-content: center; 
+  align-items: center; 
+  gap: 40px;
 }
 .progress-bars .circle {
     position: relative;
@@ -74,5 +75,6 @@ body {
     text-transform: uppercase;
     line-height: 0.6em;
 }
+
 
 
