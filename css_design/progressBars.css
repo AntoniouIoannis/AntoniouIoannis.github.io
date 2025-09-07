@@ -84,6 +84,12 @@ body {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.7); /* Προσθήκη σκιάς για καλύτερη ανάγνωση */
 }
 
+/* Κίτρινο κείμενο για JavaScript */
+.progress-bars .circle[data-color="#F7DF1E"] .number,
+.progress-bars .circle[data-color="#F7DF1E"] h4 {
+    color: #333;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .progress-bars {
@@ -136,4 +142,5 @@ body {
     object-fit: cover;
     z-index: -2; /* Πίσω από όλα */
 }
+
 
