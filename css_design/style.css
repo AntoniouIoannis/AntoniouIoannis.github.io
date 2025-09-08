@@ -239,8 +239,8 @@ section:hover {
 }
 .multiTextDevs {
   display: inline-block;
-  min-height: 1.1em;
-  line-height: 1.1;
+  min-height: 1em;
+  line-height: 1;
   overflow: hidden;
   hyphens: auto;
   vertical-align: middle;
